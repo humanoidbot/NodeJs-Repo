@@ -1,0 +1,27 @@
+doctype html
+html(lang='en')
+  head
+    title= title
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    div(class='container')
+      div(class='row')
+        div(class='col-sm-3')
+        h1= title
+
+        form(method='POST' action='/home/register')
+            div.form-group
+                label(for='UserId') UserId:
+                input#emailid.form-control(type='text', placeholder='User id' name='emailid' required='true')
+            div.form-group
+                label(for='UserName') UserName:
+                input#name.form-control(type='text', placeholder='name' name='name' required='true')    
+            div.form-group
+                label(for='password') Password:
+                input#password.form-control(type='password' placeholder='password' name='password' required='true' )
+            button.btn.btn-primary(type='submit') Submit
